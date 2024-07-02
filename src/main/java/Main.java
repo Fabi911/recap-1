@@ -8,10 +8,7 @@ public class Main {
     }
 
     public static boolean isValidLength(String password) {
-        if (password.length() >= 8) {
-            return true;
-        }
-        return false;
+        return password.length() >= 8;
     }
 
     public static boolean containsDigit(String password) {
@@ -49,5 +46,14 @@ public class Main {
         weakPasswords.add("Aa3456789");
 
         return weakPasswords.contains(password);
+    }
+
+    public static boolean containsSpecialCharacter(String password) {
+        String specialCharacters="!§$%&/()=?`#'*[]|{}≠¿¡“¶¢<>'^°";
+        for (char c : password.toCharArray()) {
+            if (specialCharacters.indexOf(c)>=0) {
+                return true;
+            }
+        } return false;
     }
 }

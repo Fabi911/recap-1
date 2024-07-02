@@ -74,5 +74,11 @@ class MainTest {
         boolean actual=Main.isWeakPassword(password);
         assertTrue(actual);
     }
+    @Test
+    public void containsSpecialCharacterTest_whenPasswordHasSpecialChar_thenReturnTrue(){
+        String password="Password1!";
+        boolean actual=Main.containsSpecialCharacter(password);
+        assertTrue(actual);
+    }
 
 }
