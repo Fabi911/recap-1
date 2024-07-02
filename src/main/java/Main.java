@@ -2,9 +2,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Main {
+
     public static void main(String[] args) {
+        String password="Tomatensalat1#";
         System.out.println("Hello World!");
-        System.out.println("Valid length: "+isValidLength("password"));
+        if(isValidLength(password) && containsDigit(password) && containsUpperAndLowerCase(password)&& !isWeakPassword(password)&&containsSpecialCharacter(password)){
+            System.out.println("Valid password");
+        }
     }
 
     public static boolean isValidLength(String password) {
